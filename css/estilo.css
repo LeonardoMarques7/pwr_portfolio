@@ -1,0 +1,101 @@
+/*A pagina toda recebe o que ta dentro do asteristico, como ser fosse um reset*/
+*{
+    margin: 0; /*Espaço fora do componente*/
+    padding: 0; /*Espaço dentro do componente*/
+    box-sizing: border-box; /*Ddesconsidera dos valores de bordar*/
+}
+
+body{
+    background-color: black;
+    font-family: "impact";
+    font-size: 16pt;
+    text-align: center;
+}
+
+/*O ponto é usado para se referir a uma class não a uma tag*/
+.menu{
+    width: 100vw; /*vw é o tamanho de medida referente ao Viewport(tamanho da tela)*/
+}
+
+/*Os dois nomes se referem as tags que estão submetidas a class menu*/
+.menu ul{
+    list-style: none; /*Remove os pontos da lista*/
+    display: flex; /*Torna a caixa que envolve o menu, como um item flexivel.*/
+    min-height: 10vh; /*Vai colocar um limite de tamanho mesmo que o que esteja la dentro seja menor*/
+}
+
+.menu ul li{
+    background-color: blue;
+    padding: 20px;
+    flex-grow: 1; /*Cada item da lista, ira ocupar uma parcela identica do valor disponivel*/
+    border: solid 1px #fff;
+    transition: background-color .2s linear; /*Vai fazer com que haja uma tansição mais suave e não imediata na troca de cor do plano de fundo*/
+}
+
+/*nth-of-type() permite que você altere apenas um item daquele conjunto ao invés do todo. Dentro do parentesês fica a posição do item que você quer mudar
+.menu ul li:nth-of-type(5){ 
+  *  flex-grow: 4;
+}*/
+
+.menu ul li a{
+    color: #f2f2f2;
+    text-decoration: none; /*Retira a decoração padrão dos links*/
+}
+
+.menu ul li ul{
+    display: none;/*Display refere-se a renderização do componente. Display none é para nao renderizar este item*/
+}
+
+.menu ul li:hover{ /*Hover é para quando o mouse passar sobre este item*/
+    background-color: transparent;
+    cursor: pointer; /*Faz com que a ponta do mouse vire a mãozinha*/
+}
+
+.menu ul li:hover > ul{ /*> faz com o que a partir deste posicionamento ele aplique na próxima ul o que esta neste bloco*/
+    display: block; /*Renderiza no formato de bloco, que seria um abaixo do outro*/
+}
+
+.central{
+    display: flex;
+    width: 100vw;
+    min-height: 79vh;
+}
+
+.central aside{
+    background-color: green;
+    flex-grow: 1;
+}
+
+.central main{
+    background-color: yellow;
+    flex-grow: 3;
+}
+
+footer{
+    background-color: red;
+    width: 100vw;
+    min-height: 10vh;
+}
+
+@media(max-width: 520px){ /*Telas que sejam abaixo de 520 ganham uma config especial, acima deste valor mantém a config padrão*/
+    .menu ul{
+        display: block;
+    }
+
+    .central{
+        display: block;
+        min-height: 50vh;
+    }
+
+    .central aside{
+        min-height: 25vh;
+    }
+
+    .central main{
+        min-height: 25vh;
+    }
+
+    body{
+        font-size: 14pt;
+    }
+}
