@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+        <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 </head>
 <body>
     
@@ -41,38 +43,59 @@
             </div>
         </aside>
         <main>
-            <section class="container__main">
-                <p class="text-sobre">
-                        <iframe className="video" src="https://www.youtube.com/embed/RXRaZzDK8F0?si=iujxs2EeBxAOGu6e"
-                        title="YouTube video player"
-                        style="border-radius: 25px; border: none; margin: 0; height: 100%;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen></iframe>
-                </p>
-                <p className="text-sobre">
-                    Sou <b>Leonardo Marques</b>, apaixonado por programação e desenvolvimento front-end. Atualmente, sou <b>estudante de
-                        Ciência da Computação na UNIP</b>,
-                    onde busco constantemente expandir meus conhecimentos na área de tecnologia. Além disso, sou formado em Técnico em
-                    Desenvolvimento de Sistemas pela <b>
-                        Etec Fernando Prestes</b>, onde aprimorei minhas habilidades práticas. Estou sempre em busca de
-                    <b>aprendizado</b> e crescimento profissional.
-                </p>
-                <p className="text-sobre mt-2">
-                    Minha jornada na programação começou como um fascínio que rapidamente se transformou em habilidade sólida.
-                    Com foco em desenvolvimento front-end, mergulho fundo em linguagens como <b>React</b>, JavaScript e PHP.
-                    Minha escola, a Etec Fernando Prestes, foi um ambiente inspirador onde expando meus <b>conhecimentos</b> e conexões
-                    na área.
-                </p>
-                <p className="text-sobre mt-2">
-                    Além dos códigos no <b>GitHub</b>, busco equilíbrio entre estudos e momentos de descontração.
-                    Apreciar séries é uma pausa revigorante em meio à intensidade da programação. Meu objetivo é claro:
-                    transformar minha <b>paixão por tecnologia</b> em uma carreira promissora, sempre em constante crescimento e
-                    aprendizado.
-                </p>
-            </section>
+            <div class="video__container">
+                <video id="player" playsinline controls  poster="./assets/foto__video.webp" >
+                    <source src="./assets/video__apresentacao.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <h2>Projetos</h2>
+            <hr class="linha-gradiente">
+            <div class="projetos__container">
+                <div class="cards__projetos">
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                    <a href="https://blog-fp.infinityfreeapp.com/">
+                        <div class="card">
+                            <img src="./assets/img/img1.png" alt="">
+                            <h4>Player de Música</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </main>
     </div>
     <footer></footer>
+    <script>
+        const player = new Plyr('#player');
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
         integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
