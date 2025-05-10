@@ -211,7 +211,7 @@ aside strong {
     width: 350px;
     background-color: #ececec;
     border-radius: 25px;
-    box-shadow: 5px 10px rgba(51, 153, 255, 0.349);
+    box-shadow: 5px 10px rgba(0, 97, 194, 0.596);
     padding: 15px 15px;
 }
 
@@ -220,13 +220,13 @@ aside strong {
 }
 
 .video__container {
+    margin-top: 2rem;
     width: 100%;
     max-width: 600px;
     border-radius: 16px;
     overflow: hidden;
     border: 2px solid #39f;
     padding: 0;
-    margin: 0;
     /* importante para cortar os cantos do poster e controles */
     box-shadow: 15px 15px 0px rgba(14, 9, 255, 0.2);
 }
@@ -248,7 +248,7 @@ main h2 {
 }
 
 .projetos__container {
-    max-height: 200px;
+    max-height: 150px;
     overflow-y: auto;
     padding-right: 10px;
     height: 100%;
@@ -293,22 +293,57 @@ main h2 {
 
 .card img {
     width: 100%;
-    height: 100%;
+    min-height: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 25px;
+    transition: .5s ease-in-out;
     box-shadow: 5px 5px 0px rgba(14, 9, 255, 0.2);
 }
 
 .cards__projetos a {
     color: #000;
     font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
     border-radius: 25px;
-    
+    width: auto;
 }
+
+.cards__projetos a:hover > .card img{
+    box-shadow: 5px 5px 10px rgba(93, 174, 255, 0.493);
+}
+
+.text__card {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    border-radius: 25px;
+    position: absolute;
+    background-color: rgba(93, 174, 255, 0);
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+}
+
+.card:hover>.text__card {
+    opacity: 1;
+    visibility: visible;
+    color: #fff;
+    background-color: rgba(35, 133, 231, 0.589);
+}
+
+.card:hover>
 
 .cards__projetos a {
     text-decoration: none;
     text-align: center;
-    padding: 10px 0PX;
 }
 
 footer {
